@@ -1,0 +1,16 @@
+use aspectfit;
+
+fn main() {
+    let width = 400.0;
+    let height = 200.0;
+    let box_w = 100.0;
+    let box_h = 100.0;
+    let upscale = 0.0;
+    let result = aspectfit_contain(width, height, box_w, box_h, upscale);
+    if len(result) == 0 { println!("invalid"); return; }
+    let mut i = 0;
+    while i < len(result) {
+        println!(at(result, i));
+        i += 1;
+    }
+}
